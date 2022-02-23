@@ -1,8 +1,8 @@
-package net.basilcam.one;
+package net.basilcam.leetcode.one;
 
 // 01 - Two Sum
 
-public class Solution {
+public class SolutionOne {
 
     public int[] twoSums(int[] nums, int target) {
         for (int i = 0; i < nums.length - 1; i++) {
