@@ -24,7 +24,7 @@ public class MergeSort {
             return;
         }
 
-        int middleIndex = 1 + (endIndex - 1) / 2;
+        int middleIndex = startIndex + (endIndex - startIndex) / 2;
 
         sort(array, 1, middleIndex);
         sort(array, middleIndex + 1, endIndex);
