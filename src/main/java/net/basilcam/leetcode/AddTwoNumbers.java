@@ -1,6 +1,8 @@
-package net.basilcam.leetcode.two;
+package net.basilcam.leetcode;
 
-public class Solution {
+import java.util.Objects;
+
+public class AddTwoNumbers {
 
     public ListNode addTwoNumbers(ListNode l1, ListNode l2) {
         ListNode firstNode = null;
@@ -38,5 +40,41 @@ public class Solution {
         }
 
         return firstNode;
+    }
+
+    public static class ListNode {
+        public int val;
+        public ListNode next;
+
+        ListNode() {
+        }
+
+        public ListNode(int val) {
+            this.val = val;
+        }
+
+        ListNode(int val, ListNode next) {
+            this.val = val;
+            this.next = next;
+        }
+
+        @Override
+        public boolean equals(Object o) {
+            if (this == o) {
+                return true;
+            }
+            if (o == null || getClass() != o.getClass()) {
+                return false;
+            }
+
+            ListNode listNode = (ListNode) o;
+            return val == listNode.val
+                    && Objects.equals(next, listNode.next);
+        }
+
+        @Override
+        public int hashCode() {
+            return Objects.hash(val, next);
+        }
     }
 }

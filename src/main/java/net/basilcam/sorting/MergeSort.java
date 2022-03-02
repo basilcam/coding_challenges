@@ -1,7 +1,6 @@
 package net.basilcam.sorting;
 
 public class MergeSort {
-
     // big-o:
     // visualize the sorting as a binary tree with log(n) levels
     // at each level, we perform n comparisons merging
@@ -13,7 +12,6 @@ public class MergeSort {
 
     // base case: T(1) = 0
     // recursive relationship: T(n) = T(n/2) + T(n/2) + (n-1)
-
 
     public static void sort(int[] array) {
         sort(array, 0, array.length - 1);
