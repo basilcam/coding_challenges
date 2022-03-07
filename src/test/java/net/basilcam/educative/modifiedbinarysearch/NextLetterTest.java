@@ -33,5 +33,4 @@ class NextLetterTest {
 
         assertThat(NextLetter.search(letters, 'h')).isEqualTo('a');
     }
-
 }
