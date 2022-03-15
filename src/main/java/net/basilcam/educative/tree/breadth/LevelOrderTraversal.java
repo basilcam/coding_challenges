@@ -25,7 +25,7 @@ public class LevelOrderTraversal {
 
             for (int i = 0; i < levelSize; i++) {
                 TreeNode currentNode = queue.poll();
-                currentLevel.add(currentNode.val);
+                currentLevel.add(currentNode.value);
 
                 if (currentNode.left != null) {
                     queue.offer(currentNode.left);

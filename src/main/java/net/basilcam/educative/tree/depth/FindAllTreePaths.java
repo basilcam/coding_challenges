@@ -9,11 +9,11 @@ public class FindAllTreePaths {
 
     public static List<List<Integer>> findPaths(TreeNode root, int sum) {
         List<List<Integer>> paths = new ArrayList<>();
-        int remainingSum = sum - root.val;
+        int remainingSum = sum - root.value;
 
         if (remainingSum == 0) {
             List<Integer> path = new ArrayList<>();
-            path.add(root.val);
+            path.add(root.value);
             paths.add(path);
             return paths;
         }
@@ -21,7 +21,7 @@ public class FindAllTreePaths {
         if (root.left != null) {
             List<List<Integer>> leftPaths = findPaths(root.left, remainingSum);
             for (List<Integer> leftPath : leftPaths) {
-                leftPath.add(0, root.val);
+                leftPath.add(0, root.value);
                 paths.add(leftPath);
             }
         }
@@ -29,7 +29,7 @@ public class FindAllTreePaths {
         if (root.right != null) {
             List<List<Integer>> rightPaths = findPaths(root.right, remainingSum);
             for (List<Integer> rightPath : rightPaths) {
-                rightPath.add(0, root.val);
+                rightPath.add(0, root.value);
                 paths.add(rightPath);
             }
         }

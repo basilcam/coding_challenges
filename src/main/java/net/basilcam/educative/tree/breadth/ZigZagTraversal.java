@@ -19,9 +19,9 @@ public class ZigZagTraversal {
             for (int i = 0; i < levelSize; i++) {
                 TreeNode node = queue.poll();
                 if (result.size() % 2 == 0) {
-                    level.add(node.val);
+                    level.add(node.value);
                 } else {
-                    level.add(0, node.val);
+                    level.add(0, node.value);
                 }
 
                 if (node.left != null) {
@@ -49,7 +49,7 @@ public class ZigZagTraversal {
 
             for (int i = 0; i < levelSize; i++) {
                 TreeNode node = queue.poll();
-                level.add(node.val);
+                level.add(node.value);
 
                 if (node.right != null) {
                     queue.offer(node.right);

@@ -8,7 +8,7 @@ public class SumOfPathNumbers {
     }
 
     private static int findSumOfPathNumbers(TreeNode root, int sum) {
-        sum = 10 * sum + root.val;
+        sum = 10 * sum + root.value;
 
         if (root.left == null && root.right == null) {
             return sum;

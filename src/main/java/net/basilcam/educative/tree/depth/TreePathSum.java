@@ -5,7 +5,7 @@ import net.basilcam.educative.tree.TreeNode;
 public class TreePathSum {
 
     public static boolean hasPath(TreeNode root, int sum) {
-        int remainingSum = sum - root.val;
+        int remainingSum = sum - root.value;
         if (remainingSum == 0) {
             return true;
         }

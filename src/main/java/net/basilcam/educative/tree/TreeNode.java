@@ -1,11 +1,11 @@
 package net.basilcam.educative.tree;
 
 public class TreeNode {
-    public int val;
+    public int value;
     public TreeNode left;
     public TreeNode right;
 
     public TreeNode(int val) {
-        this.val = val;
+        this.value = val;
     }
 }

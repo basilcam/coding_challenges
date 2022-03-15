@@ -21,7 +21,7 @@ public class ReverseLevelOrderTraversal {
 
             for (int i = 0; i < levelSize; i++) {
                 TreeNode node = queue.poll();
-                level.add(node.val);
+                level.add(node.value);
 
                 if (node.left != null) {
                     queue.offer(node.left);
